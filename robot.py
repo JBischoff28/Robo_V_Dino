@@ -11,7 +11,7 @@ class Robot:
 
     def attack(self, dinosaur):
         
-        dinosaur = Dinosaur("")
+        dinosaur = Dinosaur("Titan")
 
         self.active_weapons[0] = Weapon("Circular Saw Arm", 45)
         self.active_weapons[1] = Weapon("Arm Cannon", 35)

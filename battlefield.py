@@ -1,3 +1,4 @@
+import string
 import time
 from dinosaur import Dinosaur
 from robot import Robot
@@ -13,7 +14,16 @@ class Battlefield:
         pass
 
     def display_welcome(self):
-        pass
+        
+        print("This is the story of an epic battle!\n This battle was instigated when two large")
+        print("companies decided that it was time to\n see who had the better military solution.")
+        time.sleep(1.25)
+        print("People from around the world gathered to watch,\n and see who prevails. This is...")
+        
+        string_effect = "ROBOT VS. DINOSAUR!"
+        for char in string_effect:
+            print(char, flush=True)
+
 
     def battle_phase(self):
         pass
