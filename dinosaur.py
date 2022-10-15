@@ -1,4 +1,5 @@
-
+import random
+from robot import Robot
 
 class Dinosaur:
 
@@ -10,7 +11,23 @@ class Dinosaur:
 
     def attack(self, robot):
         
-        if self.attack_type == "Bite":
-            print(f"{self.name} attacked {}")
+        robot = Robot("MetalMan")
+        set_attack_type = random.choice(self.attack_type)
+
+        if set_attack_type == "Bite":
+            self.attack_power = 40
+            print(f"{self.name} attacked {robot.name} with {set_attack_type}, dealing {self.attack_power} damage!")
+            robot.health -= self.attack_power
+        elif set_attack_type == "Claw":
+            self.attack_power = 35
+            print(f"{self.name} attacked {robot.name} with {set_attack_type}, dealing {self.attack_power} damage!")
+            robot.health -= self.attack_power
+        else:
+            self.attack_power = 75
+            self.health -= 10
+            print(f"{self.name} attacked {robot.name} with {set_attack_type}, dealing {self.attack_power} damage!")
+            robot.health -= self.attack_power
+
+        print(f"{self.name}'s Health: {self.health} ----- {robot.name}'s Health: {robot.health}")
 
     
