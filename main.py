@@ -1,3 +1,4 @@
-string_effect = "ROBOT VS. DINOSAUR!"
-for char in string_effect:
-    print(char, end='', flush=True)
+from battlefield import Battlefield
+
+battlefield1 = Battlefield()
+battlefield1.run_game()
