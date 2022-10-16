@@ -13,17 +13,17 @@ class Dinosaur:
         set_attack_type = random.choice(self.attack_type)
 
         if set_attack_type == "Bite":
-            self.attack_power = 40
+            self.attack_power = 20
             print(f"{self.name} attacked {robot.name} with {set_attack_type}, dealing {self.attack_power} damage!")
             robot.health -= self.attack_power
         elif set_attack_type == "Claw":
-            self.attack_power = 35
+            self.attack_power = 25
             print(f"{self.name} attacked {robot.name} with {set_attack_type}, dealing {self.attack_power} damage!")
             robot.health -= self.attack_power
-        else:
-            self.attack_power = 75
+        elif set_attack_type == "Ram":
+            self.attack_power = 30
             self.health -= 10
             print(f"{self.name} attacked {robot.name} with {set_attack_type}, dealing {self.attack_power} damage!\n {self.name} took 10 self-damage.")
             robot.health -= self.attack_power
 
-        print(f"{self.name}'s Health: {self.health} ----- {robot.name}'s Health: {robot.health}")
+        print(f"{robot.name}'s Health: {robot.health} ----- {self.name}'s Health: {self.health}")
